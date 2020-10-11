@@ -3,8 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 import Message from './Message';
 
-class App extends Component<any> {
+const initialState = {
+  name: 'Scott',
+  message: 'TypeScript is bomb!'
+}
 
+// Cool trick, but could be dangerous. Sort of like 'any'
+// Do different in production!!!
+type State = Readonly<typeof initialState>
+
+class App extends Component<any, State> {
+
+  readonly state:State = initialState;
 
   render() {
     // BASIC TYPES
@@ -26,7 +36,7 @@ class App extends Component<any> {
 
     return (
       <div className="App">
-        <Message name='Scott' message='This is a simple message'/>
+        <Message name={this.state.name} message={this.state.message}/>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Alternative (preferred) to assigning prop types
 interface IUserMessage {
   name: string,
   message: string
