@@ -5,7 +5,6 @@ import Message from './Message';
 
 class App extends Component<any> {
 
-  
 
   render() {
     // BASIC TYPES
@@ -27,7 +26,7 @@ class App extends Component<any> {
 
     return (
       <div className="App">
-        <Message message='This is a simple message'/>
+        <Message name='Scott' message='This is a simple message'/>
       </div>
     );
   }
