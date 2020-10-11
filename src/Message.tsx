@@ -1,14 +1,8 @@
 import React from 'react';
+import messageHoc from './Hoc';
 
-// Alternative (preferred) to assigning prop types
-interface IUserMessage {
-  name: string,
-  message: string
-}
+const example = (props: any): any => <p>{props.name} - {props.message}</p>
 
-// Note that without the :any, TS will infer that is will be 'any'
-const Message = (props: IUserMessage): any => {
-  return <p>{props.name} - {props.message}</p>;
-};
+const Message = messageHoc(example);
 
 export default Message;
