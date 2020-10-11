@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Message from './Message';
 
-class App extends Component {
+class App extends Component<any> {
+
+  
+
   render() {
     // BASIC TYPES
     // let firstValue: string = 'Scott'; // String
@@ -23,12 +27,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {/* <p>
-            The value {firstValue} is of {typeof firstValue} type!
-          </p> */}
-        </header>
+        <Message message='This is a simple message'/>
       </div>
     );
   }
